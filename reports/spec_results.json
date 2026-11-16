@@ -1,0 +1,1994 @@
+{
+ "summary": {
+  "total": 25,
+  "t12": 16,
+  "t3": 5,
+  "t4": 4,
+  "critical": 0,
+  "gate": true,
+  "errors": {}
+ },
+ "cases": [
+  {
+   "id": 1,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Maintenance - Furnace Tune-Up (Plan)",
+        "business_unit": "STL-HVAC",
+        "fee": 0,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Maintenance - Furnace Tune-Up (Plan)",
+        "business_unit": "STL-HVAC",
+        "fee": 0,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Maintenance - Furnace Tune-Up (Plan)",
+        "business_unit": "STL-HVAC",
+        "fee": 0,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "NASH-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "NASH-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "NASH-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "ME-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "ME-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "ME-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Electrical Panel",
+        "business_unit": "STL-ELEC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Electrical Panel",
+        "business_unit": "STL-ELEC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Electrical Panel",
+        "business_unit": "STL-ELEC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": "Angi"
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": "Angi"
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": "Angi"
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "tier": "T1",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "reschedule",
+      "jobs": [],
+      "reschedule": {
+       "job_id": "J-1001",
+       "slot": "D3-PM"
+      },
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "moved J-1001 to D3-PM"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "reschedule",
+      "jobs": [],
+      "reschedule": {
+       "job_id": "J-1001",
+       "slot": "D3-PM"
+      },
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "moved J-1001 to D3-PM"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "reschedule",
+      "jobs": [],
+      "reschedule": {
+       "job_id": "J-1001",
+       "slot": "D3-PM"
+      },
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "moved J-1001 to D3-PM"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Heat Pump",
+        "business_unit": "STL-HVAC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       },
+       {
+        "job_type": "Estimate - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Heat Pump",
+        "business_unit": "STL-HVAC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       },
+       {
+        "job_type": "Estimate - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Estimate - Heat Pump",
+        "business_unit": "STL-HVAC",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       },
+       {
+        "job_type": "Estimate - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": null,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership found by service address"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership found by service address"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership found by service address"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Water Heater",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "ME-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": true,
+      "log": [
+       "asked once for the service address"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "ME-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": true,
+      "log": [
+       "asked once for the service address"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Furnace",
+        "business_unit": "ME-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": true,
+      "log": [
+       "asked once for the service address"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D2-PM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D2-PM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D2-PM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "tier": "T2",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D2-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D2-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book",
+      "jobs": [
+       {
+        "job_type": "Repair - Faucet",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D2-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": []
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "tier": "T3",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "membership"
+      ],
+      "offers": [
+       "renewal"
+      ],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership expired: quoted standard fee, offered renewal, CSR to confirm"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "membership"
+      ],
+      "offers": [
+       "renewal"
+      ],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership expired: quoted standard fee, offered renewal, CSR to confirm"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "membership"
+      ],
+      "offers": [
+       "renewal"
+      ],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "membership expired: quoted standard fee, offered renewal, CSR to confirm"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "tier": "T3",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Diagnostic - Heating",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "job_type"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "system type unknown: booked a heating diagnostic"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Diagnostic - Heating",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "job_type"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "system type unknown: booked a heating diagnostic"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Diagnostic - Heating",
+        "business_unit": "STL-HVAC",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "job_type"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "system type unknown: booked a heating diagnostic"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "tier": "T3",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "billing"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "payer is not the occupant: CSR to set billing contact"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "billing"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "payer is not the occupant: CSR to set billing contact"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Drain Clog",
+        "business_unit": "STL-PLUMB",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "billing"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "payer is not the occupant: CSR to set billing contact"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "tier": "T3",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "promotion"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "unverified promotion: quoted standard fee, CSR to confirm"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "promotion"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "unverified promotion: quoted standard fee, CSR to confirm"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - Washer",
+        "business_unit": "STL-APPL",
+        "fee": 95,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "promotion"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "unverified promotion: quoted standard fee, CSR to confirm"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "tier": "T3",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "priority"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "no same-day capacity: earliest window booked, dispatcher to review"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "priority"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "no same-day capacity: earliest window booked, dispatcher to review"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "book_flag",
+      "jobs": [
+       {
+        "job_type": "Repair - AC",
+        "business_unit": "STL-HVAC",
+        "fee": 49,
+        "slot": "D1-AM",
+        "priority": "Normal",
+        "campaign": null
+       }
+      ],
+      "reschedule": null,
+      "flags": [
+       "priority"
+      ],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "no same-day capacity: earliest window booked, dispatcher to review"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "tier": "T4",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": true,
+      "asked_for_address": false,
+      "log": [
+       "gas smell: told caller to leave and call the gas utility or 911; live hand-off"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": true,
+      "asked_for_address": false,
+      "log": [
+       "gas smell: told caller to leave and call the gas utility or 911; live hand-off"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": true,
+      "asked_for_address": false,
+      "log": [
+       "gas smell: told caller to leave and call the gas utility or 911; live hand-off"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "tier": "T4",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "decline",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "ZIP 64105 is not on any business unit's list; told caller"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "decline",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "ZIP 64105 is not on any business unit's list; told caller"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "decline",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": null,
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "ZIP 64105 is not on any business unit's list; told caller"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "tier": "T4",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "COMM",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "commercial property: route to commercial team"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "COMM",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "commercial property: route to commercial team"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "COMM",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "commercial property: route to commercial team"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "tier": "T4",
+   "passed": true,
+   "runs_passed": 3,
+   "codes": [],
+   "first_error": "",
+   "runs": [
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "billing dispute: not a booking"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "billing dispute: not a booking"
+      ]
+     },
+     "errors": []
+    },
+    {
+     "proposal": {
+      "action": "handoff",
+      "jobs": [],
+      "reschedule": null,
+      "flags": [],
+      "offers": [],
+      "handoff_to": "CSR",
+      "safety_instruction": false,
+      "asked_for_address": false,
+      "log": [
+       "billing dispute: not a booking"
+      ]
+     },
+     "errors": []
+    }
+   ]
+  }
+ ]
+}
