@@ -1,0 +1,206 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Booking Eval Harness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#111;--mut:#555;--line:#ddd;--bg:#fff;--soft:#f5f5f5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 Inter,system-ui,sans-serif}
+main{max-width:1040px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:30px;line-height:1.2;margin:0 0 8px}h2{font-size:19px;margin:44px 0 10px}
+.lede{font-size:17px;color:var(--mut);max-width:760px}a{color:var(--fg)}
+.links{margin:14px 0 0;font-size:14px}.links a{margin-right:18px}
+.point{border-left:3px solid var(--fg);padding:4px 0 4px 16px;margin:28px 0;max-width:820px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:8px;padding:18px}.k{font-weight:600}.sub{color:var(--mut);font-size:13px}
+.big{font-size:40px;font-weight:700;margin:10px 0}.big span{font-size:16px;font-weight:500;color:var(--mut)}
+.mini{width:100%;font-size:13px;border-collapse:collapse}.mini td{padding:4px 0;border-top:1px solid var(--line)}.mini td:last-child{text-align:right}
+.gate{margin-top:12px;font-weight:700;display:inline-block;padding:3px 10px;border:2px solid var(--fg);border-radius:4px}.gate.fail{background:var(--fg);color:#fff}
+table.t{width:100%;border-collapse:collapse;font-size:14px}table.t th{text-align:left;font-weight:600;border-bottom:2px solid var(--fg);padding:8px 6px;vertical-align:bottom}
+table.t td{border-bottom:1px solid var(--line);padding:9px 6px;vertical-align:top}
+.n{font-weight:600}.tag{font-size:12px;border:1px solid var(--fg);border-radius:3px;padding:1px 5px;white-space:nowrap}
+.tx{max-width:360px}.ch{font-size:12px;color:var(--mut);margin-top:3px}.v{white-space:nowrap;font-weight:600}.v.bad{white-space:normal}
+.why{font-weight:400;font-size:12px;color:var(--mut);margin-top:3px;max-width:240px}
+.filters{margin:10px 0 14px;display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:inherit;font-size:13px;border:1px solid var(--fg);background:#fff;color:var(--fg);border-radius:4px;padding:5px 10px;cursor:pointer}
+.filters button.on{background:var(--fg);color:#fff}
+.note{color:var(--mut);font-size:13px}pre{background:var(--soft);padding:12px;border-radius:6px;overflow-x:auto;font-size:13px}
+.scroll{overflow-x:auto}
+@media (max-width:640px){h1{font-size:24px}.tx{max-width:none}table.t{font-size:13px}}
+</style></head><body><main>
+<h1>Booking Eval Harness</h1>
+<p class="lede">A runnable 25-case eval for an AI booking agent at a home services contractor. It checks that every AI-booked job lands with the right job type, fee, service area and slot, and that the agent hands off the calls it should never book.</p>
+<p class="links"><a href="https://github.com/pg2342-hub/booking-eval-harness">Code on GitHub</a></p>
+
+<div class="point"><b>The point.</b> A booking counts as a win even when a detail is wrong: a plan member quoted the $95 standard fee instead of the $49 member fee is still a "booking." This harness defines what a correct booking is for one contractor and the gate an agent must pass before it books on its own: <b>24 of 25 cases on all three runs, with zero critical errors.</b></div>
+
+<h2>Results</h2>
+<div class="cards">
+<div class="card"><div class="k">Reference agent</div><div class="sub">A direct implementation of the spec's four checks and hand-off rule</div>
+<div class="big">25 <span>of 25</span></div>
+<table class="mini"><tr><td>Clean and messy bookings (T1–T2)</td><td>16 of 16</td></tr>
+<tr><td>Book and flag (T3)</td><td>5 of 5</td></tr><tr><td>Do not book (T4)</td><td>4 of 4</td></tr>
+<tr><td>Cases with a critical error</td><td>0</td></tr></table>
+<div class="gate pass">Gate: PASS</div></div>
+<div class="card"><div class="k">Naive agent</div><div class="sub">Books the first open window from the caller's words</div>
+<div class="big">5 <span>of 25</span></div>
+<table class="mini"><tr><td>Clean and messy bookings (T1–T2)</td><td>5 of 16</td></tr>
+<tr><td>Book and flag (T3)</td><td>0 of 5</td></tr><tr><td>Do not book (T4)</td><td>0 of 4</td></tr>
+<tr><td>Cases with a critical error</td><td>7</td></tr></table>
+<div class="gate fail">Gate: FAIL</div></div>
+</div>
+<p class="note">The reference agent reads structured facts, not the raw transcript, so its 25 of 25 shows the checks can be written as code and the grader agrees with a correct policy. It is not a claim about a model. The naive agent shows what the grader catches. A live-model adapter is included but has not been run.</p>
+
+<h2>Every case</h2>
+<p class="note">Constructed test calls, not real customer data. The $49 and $95 fees come from Hoffmann Brothers' public Home Protection Plan page; everything else is invented.</p>
+<div class="filters"><button data-t="all" class="on">All 25</button><button data-t="T1">T1 · Clean booking</button><button data-t="T2">T2 · Messy but bookable</button><button data-t="T3">T3 · Book and flag</button><button data-t="T4">T4 · Do not book</button></div>
+<div class="scroll"><table class="t" id="cases"><thead><tr><th>#</th><th>Tier</th><th>What the caller said</th><th>Correct outcome</th><th>Reference</th><th>Naive</th></tr></thead><tbody>
+<tr data-tier="T1">
+<td class="n">1</td><td><span class="tag">T1</span></td>
+<td class="tx">“Hi, my AC is running but it is not cooling at all. I am at 12 Oak Lane, 63131. Can someone come out?”<div class="ch">call</div></td>
+<td>Book: Repair - AC in STL-HVAC, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v">Pass</td></tr><tr data-tier="T1">
+<td class="n">2</td><td><span class="tag">T1</span></td>
+<td class="tx">“This is the Hendricks house. We are on your protection plan and I think our fall furnace tune-up is due.”<div class="ch">call</div></td>
+<td>Book: Maintenance - Furnace Tune-Up (Plan) in STL-HVAC, no fee</td>
+<td class="v">Pass</td>
+<td class="v">Pass</td></tr><tr data-tier="T1">
+<td class="n">3</td><td><span class="tag">T1</span></td>
+<td class="tx">“My water heater is leaking a little from the bottom. I live in Nashville, 37209.”<div class="ch">call</div></td>
+<td>Book: Repair - Water Heater in NASH-PLUMB, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1, E3 (critical)<div class="why">STL-PLUMB does not cover ZIP 37209</div></td></tr><tr data-tier="T1">
+<td class="n">4</td><td><span class="tag">T1</span></td>
+<td class="tx">“Kitchen drain is clogged and backing up. I am in O&#x27;Fallon, Illinois, 62269.”<div class="ch">call</div></td>
+<td>Book: Repair - Drain Clog in ME-PLUMB, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1, E3 (critical)<div class="why">STL-PLUMB does not cover ZIP 62269</div></td></tr><tr data-tier="T1">
+<td class="n">5</td><td><span class="tag">T1</span></td>
+<td class="tx">“Do you do electrical panel upgrades? We want to go to 200 amps. 63129.”<div class="ch">chat</div></td>
+<td>Book: Estimate - Electrical Panel in STL-ELEC, no fee</td>
+<td class="v">Pass</td>
+<td class="v">Pass</td></tr><tr data-tier="T1">
+<td class="n">6</td><td><span class="tag">T1</span></td>
+<td class="tx">“My washer will not drain after the cycle. 63146.”<div class="ch">call</div></td>
+<td>Book: Repair - Washer in STL-APPL, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v">Pass</td></tr><tr data-tier="T1">
+<td class="n">7</td><td><span class="tag">T1</span></td>
+<td class="tx">“[Angi lead] Name: R. Patel. Address: 44 Elm St, 63017. Problem: AC not cooling. Phone: 314-555-0601.”<div class="ch">lead_form</div></td>
+<td>Book: Repair - AC in STL-HVAC, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1<div class="why">campaign None instead of Angi</div></td></tr><tr data-tier="T1">
+<td class="n">8</td><td><span class="tag">T1</span></td>
+<td class="tx">“I have an AC repair booked for Tuesday afternoon. Can we move it to Thursday afternoon instead?”<div class="ch">call</div></td>
+<td>Move the existing job to the new day; do not create a new job</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E4<div class="why">created a new job instead of moving the existing one (duplicate)</div></td></tr><tr data-tier="T2">
+<td class="n">9</td><td><span class="tag">T2</span></td>
+<td class="tx">“We are thinking about replacing our heat pump, and while you are here, our water heater is 15 years old. Can I get prices on both? 63131.”<div class="ch">call</div></td>
+<td>Book: Estimate - Heat Pump in STL-HVAC, no fee; Estimate - Water Heater in STL-PLUMB, no fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1<div class="why">1 job(s) booked, expected 2</div></td></tr><tr data-tier="T2">
+<td class="n">10</td><td><span class="tag">T2</span></td>
+<td class="tx">“Hi, I am calling from my new cell. We are members. The furnace is making a banging noise. 21 Birch Ct, 63125.”<div class="ch">call</div></td>
+<td>Book: Repair - Furnace in STL-HVAC, $49 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E2<div class="why">quoted fee 95 instead of 49</div></td></tr><tr data-tier="T2">
+<td class="n">11</td><td><span class="tag">T2</span></td>
+<td class="tx">“I think my furnace is broken. There is no hot water anywhere in the house this morning. 63131.”<div class="ch">call</div></td>
+<td>Book: Repair - Water Heater in STL-PLUMB, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1<div class="why">missing Repair - Water Heater in STL-PLUMB; got [(&#x27;Repair - Furnace&#x27;, &#x27;STL-HVAC&#x27;)]</div></td></tr><tr data-tier="T2">
+<td class="n">12</td><td><span class="tag">T2</span></td>
+<td class="tx">“[11:05 PM text] bathroom faucet has a slow drip, not urgent, whenever you can. 63141”<div class="ch">sms</div></td>
+<td>Book: Repair - Faucet in STL-PLUMB, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E4<div class="why">slot D0-EVE instead of D1-AM</div></td></tr><tr data-tier="T2">
+<td class="n">13</td><td><span class="tag">T2</span></td>
+<td class="tx">“I need someone at my rental house in 63129, the AC is not cooling. My own house is on your plan.”<div class="ch">call</div></td>
+<td>Book: Repair - AC in STL-HVAC, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E2<div class="why">quoted fee 49 instead of 95</div></td></tr><tr data-tier="T2">
+<td class="n">14</td><td><span class="tag">T2</span></td>
+<td class="tx">“Our furnace is making a loud noise. We are near Edwardsville. [Agent asks for the address] It is 9 Main St, 62025.”<div class="ch">call</div></td>
+<td>Book: Repair - Furnace in ME-HVAC, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1, E3 (critical)<div class="why">booked without asking for the missing address</div></td></tr><tr data-tier="T2">
+<td class="n">15</td><td><span class="tag">T2</span></td>
+<td class="tx">“Can you come Saturday for the washer? [Agent: no Saturday openings; offers next windows] Wednesday afternoon works. We are in 63131.”<div class="ch">call</div></td>
+<td>Book: Repair - Washer in STL-APPL, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E4<div class="why">slot D1-AM instead of D2-PM</div></td></tr><tr data-tier="T2">
+<td class="n">16</td><td><span class="tag">T2</span></td>
+<td class="tx">“With the storm I know you are busy. Our faucet has a small drip, no rush. 63146.”<div class="ch">call</div></td>
+<td>Book: Repair - Faucet in STL-PLUMB, $95 fee</td>
+<td class="v">Pass</td>
+<td class="v">Pass</td></tr><tr data-tier="T3">
+<td class="n">17</td><td><span class="tag">T3</span></td>
+<td class="tx">“We are members, I think. The AC is not cooling. 63146.”<div class="ch">call</div></td>
+<td>Book and flag for a CSR: Repair - AC in STL-HVAC, $95 fee (flag: membership)</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E2<div class="why">quoted fee 49 instead of 95</div></td></tr><tr data-tier="T3">
+<td class="n">18</td><td><span class="tag">T3</span></td>
+<td class="tx">“We have no heat. I honestly do not know if it is a boiler or a furnace, it is in the basement. 63131.”<div class="ch">call</div></td>
+<td>Book and flag for a CSR: Diagnostic - Heating in STL-HVAC, $95 fee (flag: job type)</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E1<div class="why">missing Diagnostic - Heating in STL-HVAC; got [(&#x27;Repair - AC&#x27;, &#x27;STL-HVAC&#x27;)]</div></td></tr><tr data-tier="T3">
+<td class="n">19</td><td><span class="tag">T3</span></td>
+<td class="tx">“I own a rental in 63141 and my tenant says the drain is clogged. Please send the bill to me, not the tenant.”<div class="ch">call</div></td>
+<td>Book and flag for a CSR: Repair - Drain Clog in STL-PLUMB, $95 fee (flag: billing)</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E2<div class="why">missing &#x27;billing&#x27; flag for the CSR queue</div></td></tr><tr data-tier="T3">
+<td class="n">20</td><td><span class="tag">T3</span></td>
+<td class="tx">“I saw an ad for a $29 service call. The washer is not draining. 63017.”<div class="ch">call</div></td>
+<td>Book and flag for a CSR: Repair - Washer in STL-APPL, $95 fee (flag: promotion)</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E2<div class="why">missing &#x27;promotion&#x27; flag for the CSR queue</div></td></tr><tr data-tier="T3">
+<td class="n">21</td><td><span class="tag">T3</span></td>
+<td class="tx">“We are plan members and the AC stopped cooling. Can someone come today? 63131.”<div class="ch">call</div></td>
+<td>Book and flag for a CSR: Repair - AC in STL-HVAC, $49 fee (flag: priority)</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E4<div class="why">missing &#x27;priority&#x27; flag for the CSR queue</div></td></tr><tr data-tier="T4">
+<td class="n">22</td><td><span class="tag">T4</span></td>
+<td class="tx">“I smell gas in the basement near the furnace. Can you send someone?”<div class="ch">call</div></td>
+<td>Give the safety instruction; do not book; hand off to a CSR</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E5 (critical)<div class="why">booked a case that should be &#x27;handoff&#x27;</div></td></tr><tr data-tier="T4">
+<td class="n">23</td><td><span class="tag">T4</span></td>
+<td class="tx">“My AC is not cooling. I am in Kansas City, 64105.”<div class="ch">call</div></td>
+<td>Do not book; tell the caller the area is not served</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E3 (critical)<div class="why">booked a case that should be &#x27;decline&#x27;</div></td></tr><tr data-tier="T4">
+<td class="n">24</td><td><span class="tag">T4</span></td>
+<td class="tx">“This is the manager at Rosa&#x27;s Trattoria. Our walk-in cooler is down. 63017.”<div class="ch">call</div></td>
+<td>Do not book; hand off to the commercial team</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E5 (critical)<div class="why">booked a case that should be &#x27;handoff&#x27;</div></td></tr><tr data-tier="T4">
+<td class="n">25</td><td><span class="tag">T4</span></td>
+<td class="tx">“I want to dispute the bill from last week&#x27;s visit. I was charged for parts I did not need.”<div class="ch">call</div></td>
+<td>Do not book; hand off to a CSR</td>
+<td class="v">Pass</td>
+<td class="v bad">Fail · E5 (critical)<div class="why">booked a case that should be &#x27;handoff&#x27;</div></td></tr>
+</tbody></table></div>
+
+<h2>Does each check have cases that catch it?</h2>
+<p class="note">An eval set that still passes with a check switched off is not testing that check. Here the reference agent runs with one check off at a time.</p>
+<div class="scroll"><table class="t"><thead><tr><th>Check switched off</th><th>Cases passed</th><th>Cases with a critical error</th><th>Cases that caught it</th></tr></thead><tbody><tr><td>Job check</td><td>23 of 25</td><td>0</td><td>9, 11</td></tr><tr><td>Fee check</td><td>22 of 25</td><td>0</td><td>10, 13, 17</td></tr><tr><td>Area check</td><td>23 of 25</td><td>2</td><td>14, 23</td></tr><tr><td>Slot check</td><td>6 of 25</td><td>0</td><td>19 cases</td></tr><tr><td>Hand-off rule</td><td>22 of 25</td><td>3</td><td>22, 24, 25</td></tr></tbody></table></div>
+<p class="note">The job and area checks are caught by only two cases each, the thinnest coverage and the first place to add cases. With the slot check off, the agent takes the first open window, which is the emergency window, so almost every routine booking fails.</p>
+
+<h2>Error types</h2>
+<div class="scroll"><table class="t"><thead><tr><th>Code</th><th>What went wrong</th><th>Severity</th></tr></thead><tbody><tr><td><b>E1</b></td><td>Wrong job type, business unit, or campaign</td><td>High</td></tr><tr><td><b>E2</b></td><td>Wrong fee, membership missed, or billing contact wrong</td><td>High</td></tr><tr><td><b>E3</b></td><td>Booked outside the service area or in the wrong market</td><td>Critical</td></tr><tr><td><b>E4</b></td><td>Wrong slot or priority, or a duplicate job</td><td>High</td></tr><tr><td><b>E5</b></td><td>Should have handed off and did not</td><td>Critical</td></tr><tr><td><b>E6</b></td><td>Flagged, refused, or handed off a job it could have booked</td><td>Low</td></tr></tbody></table></div>
+
+<h2>The rule when a check is unsure</h2>
+<p>Book and flag when a CSR can fix the error before the technician leaves (a lapsed membership, an unclear job type, an unconfirmed promotion). Do not book, and hand off, when it cannot be fixed later (an out-of-area address, a gas smell, a commercial job, a billing dispute). Stopping a booking costs the job, especially after hours; booking the wrong one costs a truck roll or a safety risk.</p>
+
+<h2>Run it yourself</h2>
+<pre>python3 run_eval.py --agent spec --runs 3
+python3 run_eval.py --agent naive --runs 3
+python3 ablation.py</pre>
+<p class="note">Python 3.9+ and the standard library only. Built by Pranav Gudise from public information only; not affiliated with Netic, Hoffmann Brothers, or ServiceTitan.</p>
+</main>
+<script>
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.filters button').forEach(x=>x.classList.toggle('on',x===b));
+ const t=b.dataset.t;document.querySelectorAll('#cases tbody tr').forEach(r=>r.style.display=(t==='all'||r.dataset.tier===t)?'':'none');
+}));
+</script></body></html>
