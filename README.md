@@ -1,5 +1,7 @@
 # Booking eval harness
 
+Demo page: https://pg2342-hub.github.io/booking-eval-harness/ (results, every case, and the ablation, no cloning needed)
+
 A runnable version of the 25-case eval set in the booking-check spec (`Netic_Hoffmann_Booking_Check.pdf`), which defines what a correct booking is for one contractor and the gate an agent must pass before it books on its own. It scores a booking agent on the four checks in the spec (job, fee, area, slot) and on the hand-off rule, and it applies the same go-live gate.
 
 All data here is constructed test data. The field service system is a mock shaped like a ServiceTitan account (business units with ZIP lists, a fee table, customers with memberships by location, open jobs, and capacity windows). The $49 member and $95 standard service fees come from Hoffmann Brothers' public Home Protection Plan page; everything else is invented. Nothing comes from Hoffmann Brothers' or Netic's systems.
@@ -27,6 +29,7 @@ To score a live model, install `anthropic` and `pydantic`, set `ANTHROPIC_API_KE
 | `harness/claude_agent.py` | The live-model adapter. |
 | `run_eval.py` | Runs an agent over the 25 cases and applies the gate. |
 | `ablation.py` | Runs the reference agent with one check switched off at a time. |
+| `scripts/build_demo.py` | Builds the demo page in `docs/` from the cases and the latest reports. |
 
 The gate: 24 of 25 cases on all three runs, with zero critical errors, T1-T2 at 15 of 16 or better, T3 5 of 5, and T4 4 of 4.
 
