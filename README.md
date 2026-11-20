@@ -2,7 +2,7 @@
 
 Demo page: https://pg2342-hub.github.io/booking-eval-harness/ (results, every case, and the ablation, no cloning needed)
 
-A runnable version of the 25-case eval set in the booking-check spec (`Netic_Hoffmann_Booking_Check.pdf`), which defines what a correct booking is for one contractor and the gate an agent must pass before it books on its own. It scores a booking agent on the four checks in the spec (job, fee, area, slot) and on the hand-off rule, and it applies the same go-live gate.
+A runnable version of the 25-case eval set in a booking-check spec I wrote (a separate PDF, not in this repo), which defines what a correct booking is for one contractor and the gate an agent must pass before it books on its own. It scores a booking agent on the four checks in the spec (job, fee, area, slot) and on the hand-off rule, and it applies the same go-live gate.
 
 All data here is constructed test data. The field service system is a mock shaped like a ServiceTitan account (business units with ZIP lists, a fee table, customers with memberships by location, open jobs, and capacity windows). The $49 member and $95 standard service fees come from Hoffmann Brothers' public Home Protection Plan page; everything else is invented. Nothing comes from Hoffmann Brothers' or Netic's systems.
 
