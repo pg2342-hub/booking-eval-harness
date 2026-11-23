@@ -1,5 +1,6 @@
 """Build the GitHub Pages demo (docs/index.html) from the cases and the latest reports.
 python3 scripts/build_demo.py   (run run_eval.py for both agents first)"""
+import subprocess
 import json
 import sys
 from html import escape
@@ -100,35 +101,25 @@ tier_btns = "".join(f'<button data-t="{t}">{t} · {n}</button>' for t, n in TIER
 
 html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Booking Eval Harness</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{{--fg:#111;--mut:#555;--line:#ddd;--bg:#fff;--soft:#f5f5f5}}
-*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 Inter,system-ui,sans-serif}}
-main{{max-width:1040px;margin:0 auto;padding:40px 16px 64px}}
-h1{{font-size:30px;line-height:1.2;margin:0 0 8px}}h2{{font-size:19px;margin:44px 0 10px}}
-.lede{{font-size:17px;color:var(--mut);max-width:760px}}a{{color:var(--fg)}}
-.links{{margin:14px 0 0;font-size:14px}}.links a{{margin-right:18px}}
-.point{{border-left:3px solid var(--fg);padding:4px 0 4px 16px;margin:28px 0;max-width:820px}}
-.cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}}
-.card{{border:1px solid var(--line);border-radius:8px;padding:18px}}.k{{font-weight:600}}.sub{{color:var(--mut);font-size:13px}}
-.big{{font-size:40px;font-weight:700;margin:10px 0}}.big span{{font-size:16px;font-weight:500;color:var(--mut)}}
-.mini{{width:100%;font-size:13px;border-collapse:collapse}}.mini td{{padding:4px 0;border-top:1px solid var(--line)}}.mini td:last-child{{text-align:right}}
-.gate{{margin-top:12px;font-weight:700;display:inline-block;padding:3px 10px;border:2px solid var(--fg);border-radius:4px}}.gate.fail{{background:var(--fg);color:#fff}}
-table.t{{width:100%;border-collapse:collapse;font-size:14px}}table.t th{{text-align:left;font-weight:600;border-bottom:2px solid var(--fg);padding:8px 6px;vertical-align:bottom}}
-table.t td{{border-bottom:1px solid var(--line);padding:9px 6px;vertical-align:top}}
-.n{{font-weight:600}}.tag{{font-size:12px;border:1px solid var(--fg);border-radius:3px;padding:1px 5px;white-space:nowrap}}
-.tx{{max-width:360px}}.ch{{font-size:12px;color:var(--mut);margin-top:3px}}.v{{white-space:nowrap;font-weight:600}}.v.bad{{white-space:normal}}
-.why{{font-weight:400;font-size:12px;color:var(--mut);margin-top:3px;max-width:240px}}
-.filters{{margin:10px 0 14px;display:flex;flex-wrap:wrap;gap:8px}}
-.filters button{{font:inherit;font-size:13px;border:1px solid var(--fg);background:#fff;color:var(--fg);border-radius:4px;padding:5px 10px;cursor:pointer}}
-.filters button.on{{background:var(--fg);color:#fff}}
-.note{{color:var(--mut);font-size:13px}}pre{{background:var(--soft);padding:12px;border-radius:6px;overflow-x:auto;font-size:13px}}
-.scroll{{overflow-x:auto}}
-@media (max-width:640px){{h1{{font-size:24px}}.tx{{max-width:none}}table.t{{font-size:13px}}}}
+.point{{border-left:2px solid var(--green);padding:4px 0 4px 18px;margin:32px 0 0;max-width:46em;font-size:17px}}
+.cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}}
+.card{{margin:0}}.k{{font:400 22px/1.2 var(--serif)}}.sub{{color:var(--ink-2);font-size:14px;margin-top:4px}}
+.big{{font:400 56px/1 var(--serif);margin:18px 0 14px}}.big span{{font:400 15px/1 var(--sans);color:var(--ink-2)}}
+.mini{{font-size:14px}}.mini td{{padding:8px 0;border-bottom:1px solid var(--rule)}}.mini td:last-child{{text-align:right}}
+.gate{{margin-top:16px;display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;
+font:500 13px/1 var(--mono);letter-spacing:.04em}}.gate.pass{{background:var(--green-wash);color:var(--green)}}
+.gate.fail{{background:var(--ink);color:var(--paper)}}
+.n{{font-family:var(--mono);font-size:13px}}.tag{{font:400 12px/1 var(--mono);border:1px solid var(--rule);border-radius:999px;padding:4px 8px;white-space:nowrap}}
+.tx{{max-width:360px}}.ch{{font-size:13px;color:var(--ink-2);margin-top:4px}}.v{{white-space:nowrap;font-weight:500;color:var(--green)}}
+.v.bad{{white-space:normal;color:var(--ink)}}.why{{font-weight:400;font-size:13px;color:var(--ink-2);margin-top:4px;max-width:240px}}
+.filters{{margin:16px 0 18px;display:flex;flex-wrap:wrap;gap:8px}}.filters button{{min-height:36px;font-size:14px}}
+.filters button.on{{background:var(--green);border-color:var(--green);color:#fff}}
+.note{{color:var(--ink-2);font-size:15px;max-width:46em;margin-top:14px}}
+@media (max-width:640px){{.tx{{max-width:none}}.big{{font-size:46px}}}}
 </style></head><body><main>
 <h1>Booking Eval Harness</h1>
-<p class="lede">A runnable 25-case eval for an AI booking agent at a home services contractor. It checks that every AI-booked job lands with the right job type, fee, service area and slot, and that the agent hands off the calls it should never book.</p>
-<p class="links"><a href="https://github.com/pg2342-hub/booking-eval-harness">Code on GitHub</a></p>
+<p class="lead">A runnable 25-case eval for an AI booking agent at a home services contractor. It checks that every AI-booked job lands with the right job type, fee, service area and slot, and that the agent hands off the calls it should never book.</p>
 
 <div class="point"><b>The point.</b> A booking counts as a win even when a detail is wrong: a plan member quoted the $95 standard fee instead of the $49 member fee is still a "booking." This harness defines what a correct booking is for one contractor and the gate an agent must pass before it books on its own: <b>24 of 25 cases on all three runs, with zero critical errors.</b></div>
 
@@ -173,5 +164,6 @@ document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('clic
 out = ROOT / "docs"
 out.mkdir(exist_ok=True)
 (out / "index.html").write_text(html)
+subprocess.run([sys.executable, str(ROOT / "scripts" / "demo_chrome.py"), str(out / "index.html"), "--repo", "booking-eval-harness"], check=True)
 (out / ".nojekyll").write_text("")
 print("wrote docs/index.html")
